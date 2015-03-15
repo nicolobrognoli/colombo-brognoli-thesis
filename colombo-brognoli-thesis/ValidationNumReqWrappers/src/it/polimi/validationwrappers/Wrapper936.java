@@ -1,0 +1,34 @@
+
+package it.polimi.validationwrappers;import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+public class Wrapper936{
+private Map<String,Float> mapReward = new HashMap<String,Float>();
+private List<String> rewardNameList = new ArrayList<String>();
+private List<String> alternatives = new ArrayList<String>();public Wrapper936(){
+rewardNameList.add("time");		mapReward.put("totaltime", 100.0f);mapReward.put("weighttime", 0.7f);mapReward.put("policytime", 0.0f);
+alternatives.add("A");
+mapReward.put("Atime",0f);
+mapReward.put("AtimeMin",0.09542635590076502f);
+mapReward.put("AtimeMax",0.05535046737988244f);
+alternatives.add("B");
+mapReward.put("Btime",0f);
+mapReward.put("BtimeMin",0.07207612333018955f);
+mapReward.put("BtimeMax",0.08949702306965521f);
+alternatives.add("C");
+mapReward.put("Ctime",0f);
+mapReward.put("CtimeMin",0.07783172439592571f);
+mapReward.put("CtimeMax",0.09289971324216198f);rewardNameList.add("h");		mapReward.put("totalh", 2000f);mapReward.put("weighth", 0.3f);mapReward.put("policyh", 0.0f);
+mapReward.put("Ah",1f);
+mapReward.put("AhMin",1068.6924102317842f);
+mapReward.put("AhMax",1068.1715909168736f);
+mapReward.put("Bh",1f);
+mapReward.put("BhMin",1067.2893766520829f);
+mapReward.put("BhMax",1065.2273780765945f);
+mapReward.put("Ch",1f);
+mapReward.put("ChMin",1064.6406476057953f);
+mapReward.put("ChMax",1065.8249593604323f);
+}
+public void doActivity(){
+		String choice = AlternativeUtility.getAlternative(alternatives,rewardNameList,mapReward);ActivityInterface obj = null;if(choice.equals("A")){obj = new A();}if(choice.equals("B")){obj = new B();}if(choice.equals("C")){obj = new C();}		obj.doActivity();AlternativeUtility.updateContext(rewardNameList, choice, mapReward);}}

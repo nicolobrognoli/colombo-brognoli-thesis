@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://prova.polimi.it/" targetNamespace="http://prova.polimi.it/" version="1.0">
+<xs:element name="getLocation" type="tns:getLocation"/>
+<xs:element name="getLocationResponse" type="tns:getLocationResponse"/>
+<xs:element name="getPhoto" type="tns:getPhoto"/>
+<xs:element name="getPhotoResponse" type="tns:getPhotoResponse"/>
+<xs:element name="inputPrice" type="tns:inputPrice"/>
+<xs:element name="inputPriceResponse" type="tns:inputPriceResponse"/>
+<xs:element name="localRecognition" type="tns:localRecognition"/>
+<xs:element name="localRecognitionResponse" type="tns:localRecognitionResponse"/>
+<xs:element name="localSearch" type="tns:localSearch"/>
+<xs:element name="localSearchResponse" type="tns:localSearchResponse"/>
+<xs:element name="productLookup" type="tns:productLookup"/>
+<xs:element name="productLookupResponse" type="tns:productLookupResponse"/>
+<xs:element name="publishPrize" type="tns:publishPrize"/>
+<xs:element name="publishPrizeResponse" type="tns:publishPrizeResponse"/>
+<xs:element name="remoteRecognition" type="tns:remoteRecognition"/>
+<xs:element name="remoteRecognitionResponse" type="tns:remoteRecognitionResponse"/>
+<xs:element name="resultOrdering" type="tns:resultOrdering"/>
+<xs:element name="resultOrderingResponse" type="tns:resultOrderingResponse"/>
+<xs:element name="secondaryWebSearch" type="tns:secondaryWebSearch"/>
+<xs:element name="secondaryWebSearchResponse" type="tns:secondaryWebSearchResponse"/>
+<xs:element name="webSearch" type="tns:webSearch"/>
+<xs:element name="webSearchResponse" type="tns:webSearchResponse"/>
+<xs:complexType name="webSearch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="webSearchResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getLocation">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getLocationResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="remoteRecognition">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="remoteRecognitionResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getPhoto">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getPhotoResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="secondaryWebSearch">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="secondaryWebSearchResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="publishPrize">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="publishPrizeResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="inputPrice">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="inputPriceResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="localSearch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="localSearchResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="resultOrdering">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="resultOrderingResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="localRecognition">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="localRecognitionResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="productLookup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="productLookupResponse">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>

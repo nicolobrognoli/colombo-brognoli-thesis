@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="TestWebServiceService" targetNamespace="http://prova.polimi.it/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://prova.polimi.it/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+<import namespace="http://prova.polimi.it/" schemaLocation="testwebservice_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="productLookup">
+    <wsdl:part name="parameters" element="tns:productLookup">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLocation">
+    <wsdl:part name="parameters" element="tns:getLocation">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="localSearch">
+    <wsdl:part name="parameters" element="tns:localSearch">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="remoteRecognitionResponse">
+    <wsdl:part name="parameters" element="tns:remoteRecognitionResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webSearch">
+    <wsdl:part name="parameters" element="tns:webSearch">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="localRecognitionResponse">
+    <wsdl:part name="parameters" element="tns:localRecognitionResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="publishPrizeResponse">
+    <wsdl:part name="parameters" element="tns:publishPrizeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="localRecognition">
+    <wsdl:part name="parameters" element="tns:localRecognition">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPhotoResponse">
+    <wsdl:part name="parameters" element="tns:getPhotoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="inputPriceResponse">
+    <wsdl:part name="parameters" element="tns:inputPriceResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webSearchResponse">
+    <wsdl:part name="parameters" element="tns:webSearchResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="secondaryWebSearchResponse">
+    <wsdl:part name="parameters" element="tns:secondaryWebSearchResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="resultOrderingResponse">
+    <wsdl:part name="parameters" element="tns:resultOrderingResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="remoteRecognition">
+    <wsdl:part name="parameters" element="tns:remoteRecognition">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="inputPrice">
+    <wsdl:part name="parameters" element="tns:inputPrice">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="productLookupResponse">
+    <wsdl:part name="parameters" element="tns:productLookupResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="publishPrize">
+    <wsdl:part name="parameters" element="tns:publishPrize">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="secondaryWebSearch">
+    <wsdl:part name="parameters" element="tns:secondaryWebSearch">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPhoto">
+    <wsdl:part name="parameters" element="tns:getPhoto">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLocationResponse">
+    <wsdl:part name="parameters" element="tns:getLocationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="localSearchResponse">
+    <wsdl:part name="parameters" element="tns:localSearchResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="resultOrdering">
+    <wsdl:part name="parameters" element="tns:resultOrdering">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="TestWebServiceSEI">
+    <wsdl:operation name="webSearch">
+      <wsdl:input name="webSearch" message="tns:webSearch">
+    </wsdl:input>
+      <wsdl:output name="webSearchResponse" message="tns:webSearchResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLocation">
+      <wsdl:input name="getLocation" message="tns:getLocation">
+    </wsdl:input>
+      <wsdl:output name="getLocationResponse" message="tns:getLocationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="remoteRecognition">
+      <wsdl:input name="remoteRecognition" message="tns:remoteRecognition">
+    </wsdl:input>
+      <wsdl:output name="remoteRecognitionResponse" message="tns:remoteRecognitionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPhoto">
+      <wsdl:input name="getPhoto" message="tns:getPhoto">
+    </wsdl:input>
+      <wsdl:output name="getPhotoResponse" message="tns:getPhotoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="secondaryWebSearch">
+      <wsdl:input name="secondaryWebSearch" message="tns:secondaryWebSearch">
+    </wsdl:input>
+      <wsdl:output name="secondaryWebSearchResponse" message="tns:secondaryWebSearchResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="publishPrize">
+      <wsdl:input name="publishPrize" message="tns:publishPrize">
+    </wsdl:input>
+      <wsdl:output name="publishPrizeResponse" message="tns:publishPrizeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inputPrice">
+      <wsdl:input name="inputPrice" message="tns:inputPrice">
+    </wsdl:input>
+      <wsdl:output name="inputPriceResponse" message="tns:inputPriceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="localSearch">
+      <wsdl:input name="localSearch" message="tns:localSearch">
+    </wsdl:input>
+      <wsdl:output name="localSearchResponse" message="tns:localSearchResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="resultOrdering">
+      <wsdl:input name="resultOrdering" message="tns:resultOrdering">
+    </wsdl:input>
+      <wsdl:output name="resultOrderingResponse" message="tns:resultOrderingResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="localRecognition">
+      <wsdl:input name="localRecognition" message="tns:localRecognition">
+    </wsdl:input>
+      <wsdl:output name="localRecognitionResponse" message="tns:localRecognitionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="productLookup">
+      <wsdl:input name="productLookup" message="tns:productLookup">
+    </wsdl:input>
+      <wsdl:output name="productLookupResponse" message="tns:productLookupResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TestWebServiceServiceSoapBinding" type="tns:TestWebServiceSEI">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="webSearch">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webSearch">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webSearchResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLocation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLocation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLocationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="remoteRecognition">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="remoteRecognition">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="remoteRecognitionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPhoto">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPhoto">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPhotoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="publishPrize">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="publishPrize">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="publishPrizeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="secondaryWebSearch">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="secondaryWebSearch">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="secondaryWebSearchResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inputPrice">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="inputPrice">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="inputPriceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="localSearch">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="localSearch">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="localSearchResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="resultOrdering">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="resultOrdering">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="resultOrderingResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="localRecognition">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="localRecognition">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="localRecognitionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="productLookup">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="productLookup">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="productLookupResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TestWebServiceService">
+    <wsdl:port name="TestWebServicePort" binding="tns:TestWebServiceServiceSoapBinding">
+      <soap:address location="http://localhost:8080/WebServiceTest/services/TestWebServicePort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

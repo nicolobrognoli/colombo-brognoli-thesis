@@ -1,0 +1,23 @@
+<model>
+	<interface><name>X</name>
+		<class><name>A</name><state>4</state>
+		</class>
+		<class><name>B</name><state>5</state>
+		</class>
+	</interface>
+	<interface><name>Y</name>
+		<class><name>C</name><state>8</state>
+		</class>
+		<class><name>D</name><state>9</state>
+		</class>
+		<class><name>E</name><state>10</state>
+		</class>
+	</interface>
+	<optionality state="1" class="S1">
+		<optstate>2</optstate><finalstate>3</finalstate>
+	</optionality>
+	<optionality state="4" class="A">
+		<optstate>6</optstate><finalstate>7</finalstate>
+	</optionality>
+	<totalReward><time>40</time><usability>7</usability></totalReward>
+</model>

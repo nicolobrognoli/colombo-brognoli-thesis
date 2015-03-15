@@ -1,0 +1,49 @@
+<model>
+	<interface><name>InputPriceInterface</name>
+		<class><name>InputPrice</name><state>0</state>
+		</class>
+	</interface>
+	<interface><name>PhotoAcquisitionInterface</name>
+		<class><name>PhotoAcquisition</name><state>1</state>
+		</class>
+	</interface>
+	<interface><name>RecognitionInterface</name>
+		<class><name>LocalRecognition</name><state>2</state>
+		</class>
+		<class><name>RemoteRecognition</name><state>3</state>
+		</class>
+	</interface>
+	<interface><name>ProductLookupInterface</name>
+		<class><name>ProductLookup</name><state>4</state>
+		</class>
+	</interface>
+	<interface><name>LocationInterface</name>
+		<class><name>LocationGPS</name><state>5</state>
+		</class>
+		<class><name>LocationNPS</name><state>6</state>
+		</class>
+	</interface>
+	<interface><name>LocalSearchInterface</name>
+		<class><name>LocalSearch</name><state>7</state>
+		</class>
+	</interface>
+	<interface><name>WebSearchInterface</name>
+		<class><name>WebSearch</name><state>8</state>
+		</class>
+	</interface>
+	<interface><name>SecondaryWebSearchInterface</name>
+	    <class type="optional"><name>SecondaryWebSearch</name><state>9</state>
+	    </class>
+	</interface>
+	<interface><name>ResultOrderingInterface</name>
+	    <class  type="optional"><name>ResultOrdering</name><state>10</state>
+	    </class>
+	</interface>
+		<interface><name>PublishPriceInterface</name>
+	    <class><name>PublishPrice</name><state>11</state>
+	    </class>
+	</interface>
+	<totalReward><time>22</time><usability>17</usability></totalReward>
+	<weight><time>0.7</time><usability>0.3</usability></weight>
+	<policy><time>lower</time><usability>upper</usability></policy>
+</model>

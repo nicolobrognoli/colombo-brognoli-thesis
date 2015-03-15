@@ -1,0 +1,21 @@
+package it.polimi.demo;
+
+import java.net.URL;
+
+import javax.xml.namespace.QName;
+
+public class LocationNPS implements LocationInterface {
+	@Override
+	public void getLocation() {
+		QName SERVICE_NAME = new QName("http://demo.polimi.it/", "DemoWebMainService");
+		URL wsdlURL = DemoWebMainService.WSDL_LOCATION;
+             
+		DemoWebMainService ss = new DemoWebMainService(wsdlURL, SERVICE_NAME);
+		DemoWebMainSEI port = ss.getDemoWebMainPort();           
+     
+        System.out.println("[INFO] Invoking location NPS...");
+        long time = System.currentTimeMillis();
+        port.getLocationNPS();
+        System.out.println("[INFO] Delta: " + (System.currentTimeMillis() - time) +" ms");
+	}
+}
